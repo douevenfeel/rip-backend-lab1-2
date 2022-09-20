@@ -7,10 +7,10 @@
         <title>Document</title>
     </head>
     <body>
-        {% extends 'base.html' %} {% block title %} Информация о товаре <strong>№{{data.id}}</strong>
+        {% extends 'base.html' %} {% block title %} Информация о товаре <strong>№{{data.item.id}}</strong>
         {% endblock %} {% block content %}
-        <p>Название устройства: <strong>{{data.title}}</strong></p>
-        <p>Стоимость устройства: <strong>{{data.price}}р.</strong></p>
+        <p>Название устройства: <strong>{{data.item.title}}</strong></p>
+        <p>Стоимость устройства: <strong>{{data.item.price}}р.</strong></p>
         {% endblock %}
     </body>
 </html>
