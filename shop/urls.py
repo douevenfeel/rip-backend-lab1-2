@@ -19,6 +19,8 @@ from polls import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('item/<int:id>/',views.getItemNoDB, name='item_url'),
+    # path('',views.getItemsNoDB)
     path('item/<int:id>/',views.getItem, name='item_url'),
     path('',views.getItems)
 ]
