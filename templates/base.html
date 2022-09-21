@@ -9,7 +9,11 @@
         <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}" />
     </head>
     <body class="app">
-        <p><a href="/" class="header">Shop</a></p>
+        <div class="header">
+            <a href="/">Home</a>
+            <a href="/shop">Shop</a>
+            <a href="/users">Users</a>
+        </div>
         <div class="container">
             <p class="pageTitle">{% block title %} {% endblock %}</p>
             {% block content %}{% endblock %}
