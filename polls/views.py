@@ -1,6 +1,5 @@
 from datetime import date
 from django.shortcuts import render
-from django.http import HttpResponse
 from polls.models import Items, Users, Baskets, Roles
 
 def startPage(request):
