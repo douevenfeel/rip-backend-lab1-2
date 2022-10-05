@@ -29,24 +29,10 @@ class Items(models.Model):
         verbose_name = 'Устройство'
         verbose_name_plural = "Устройства"
 
-
-class Roles(models.Model):
-    title = models.CharField(max_length=30, verbose_name="Роль")
-
-    def __str__(self):
-        return f'{self.title}'
-    class Meta:
-        managed = False
-        app_label = 'polls'
-        db_table = 'roles'
-        verbose_name = 'Роль'
-        verbose_name_plural = "Роли"
-
         
 class Users(models.Model):
     username = models.CharField(max_length=30, verbose_name="Имя пользователя")
     password = models.CharField(max_length=30, verbose_name="Пароль пользователя")
-    role = models.ForeignKey('Roles', models.DO_NOTHING, db_column='role', verbose_name="Роль")
 
     def __str__(self):
         return f'{self.username}'

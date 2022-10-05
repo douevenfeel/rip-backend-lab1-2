@@ -13,6 +13,3 @@ class UsersAdmin(admin.ModelAdmin):
 class BasketsAdmin(admin.ModelAdmin):
     pass
 
-@admin.register(Roles)
-class RolesAdmin(admin.ModelAdmin):
-    pass

@@ -10,7 +10,6 @@
         {% extends 'base.html' %} {% block title %} Информация о пользователе <strong>№{{data.user.id}}</strong>
         {% endblock %} {% block content %}
         <p>Имя пользователя: <strong>{{data.user.username}}</strong></p>
-        <p>Роль: <strong>{{data.user.role.title}}</strong></p>
         <p>Корзина:</p>
         <ul>
             {% for item in data.basket %}

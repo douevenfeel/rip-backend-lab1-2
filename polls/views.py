@@ -1,6 +1,6 @@
 from datetime import date
 from django.shortcuts import render
-from polls.models import Items, Users, Baskets, Roles
+from polls.models import Items, Users, Baskets
 
 def startPage(request):
     return render(request, 'startPage.html', {'data':{
@@ -30,5 +30,4 @@ def getUser(request, id):
         'date': date.today(),
         'user':Users.objects.filter(id=id)[0],
         'basket': Baskets.objects.filter(user=id),
-        'role': Roles.objects.filter(id=id)[0]
     }})
